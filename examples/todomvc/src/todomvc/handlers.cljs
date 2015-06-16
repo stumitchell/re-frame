@@ -56,7 +56,8 @@
   :toggle-done
   todo-middleware
   (fn [todos [id]]
-    (update-in todos [id :done] not)))
+    (print "TODO 1: complete this handler toggle done" todos)
+    todos))
 
 
 (register-handler
@@ -70,7 +71,8 @@
   :delete-todo
   todo-middleware
   (fn [todos [id]]
-    (dissoc todos id)))
+    (print "TODO 3: complete this handler delete id" id)
+    todos))
 
 
 (register-handler

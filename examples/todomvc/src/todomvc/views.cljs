@@ -87,7 +87,7 @@
             [:input#toggle-all
              {:type "checkbox"
               :checked (pos? @completed-count)
-              :on-change #(dispatch [:complete-all-toggle])}]
+              :on-change #(print "TODO 2: hook me up to the correct dispatch")}]
             [:label {:for "toggle-all"} "Mark all as complete"]
             [todo-list visible-todos]]
            [stats-footer]])]
